@@ -6,6 +6,16 @@ Vode là một skill giúp AI coding agent biến ý tưởng thành một sản
 
 [English](README.md)
 
+## BUILD là phần lõi
+
+Vode là phiên bản có thể thực thi của workflow BUILD:
+
+**B**rainstorm -> **U**nderstand -> **I**mplement -> **L**aunch -> **D**istribute
+
+5 verb này vẫn là các mốc chính của vòng đời sản phẩm. Vode bổ sung các verb như `decide`, `plan`, `debug`, `review`, `refine`, `iterate`, `pivot` và `resume` để bạn có thể bắt đầu đúng từ trạng thái hiện tại của project.
+
+Bạn không cần chạy đủ mọi bước.
+
 ## Tại sao cần Vode?
 
 Vibecoding rất nhanh khi AI hiểu đúng sản phẩm. Nó trở nên khó chịu khi AI:
@@ -16,12 +26,6 @@ Vibecoding rất nhanh khi AI hiểu đúng sản phẩm. Nó trở nên khó ch
 - thêm hạ tầng chưa cần thiết
 - refactor những phần không liên quan
 - phá các quyết định đã chốt trước đó
-
-Vode đóng gói một workflow nhẹ:
-
-**Brainstorm -> Understand -> Plan -> Implement -> Review -> Refine -> Launch -> Distribute -> Iterate**
-
-Bạn không cần đi tuần tự từ đầu đến cuối. Có thể bắt đầu ở bất kỳ bước nào phù hợp với trạng thái hiện tại.
 
 ## Cài đặt
 

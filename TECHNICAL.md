@@ -6,7 +6,13 @@ This document is for Vode developers and maintainers.
 
 Vode is a model-agnostic product-building protocol packaged as an agent skill.
 
-Its job is not to make an agent "smarter" in the abstract. Its job is to reduce avoidable product mistakes by giving the agent:
+BUILD is the lifecycle backbone:
+
+**Brainstorm -> Understand -> Implement -> Launch -> Distribute**
+
+Supporting verbs exist around those anchors because real projects are rarely entered at a clean lifecycle boundary.
+
+Vode's job is not to make an agent "smarter" in the abstract. Its job is to reduce avoidable product mistakes by giving the agent:
 
 1. a stable routing layer
 2. a small set of product-building principles

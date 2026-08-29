@@ -6,17 +6,21 @@ Vode is a product-building skill for AI coding agents. It helps you turn an idea
 
 [Tiếng Việt](README_VI.md)
 
+## BUILD at the core
+
+Vode is the executable skill form of the BUILD product workflow:
+
+**B**rainstorm -> **U**nderstand -> **I**mplement -> **L**aunch -> **D**istribute
+
+Those five verbs remain the lifecycle anchors. Vode adds supporting verbs such as `decide`, `plan`, `debug`, `review`, `refine`, `iterate`, `pivot`, and `resume` so you can enter the workflow from the state your product is actually in.
+
+You do not have to run every stage.
+
 ## Why Vode?
 
 Vibecoding is fast when the agent understands the product. It gets frustrating when the agent guesses too much, over-engineers, rewrites working decisions, or starts coding before the idea is clear.
 
-Vode gives the agent a lightweight product workflow:
-
-**Brainstorm -> Understand -> Plan -> Implement -> Review -> Refine -> Launch -> Distribute -> Iterate**
-
-You can enter anywhere. You do not have to follow every step.
-
-Vode can also infer the right route from natural language:
+Vode can infer the right route from natural language:
 
 ```
 vode what next?

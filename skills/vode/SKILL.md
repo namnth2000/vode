@@ -8,7 +8,15 @@ version: 1.0.0
 
 Vode = Vibe cODE.
 
-Vode is a product-building protocol for AI coding agents. Help the user move from an idea, question, bug, or existing project state toward a usable product with the smallest sensible amount of process.
+Vode is the executable skill form of the BUILD product workflow.
+
+The five lifecycle anchors are:
+
+**Brainstorm -> Understand -> Implement -> Launch -> Distribute**
+
+Supporting verbs exist so the user can enter from the project's real current state instead of forcing every request through the full lifecycle.
+
+Vode helps the user move from an idea, question, bug, or existing project state toward a usable product with the smallest sensible amount of process.
 
 The goal is not maximum code. The goal is progress that matches what the user actually wants.
 
