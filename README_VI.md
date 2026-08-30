@@ -29,7 +29,11 @@ Vibecoding rất nhanh khi AI hiểu đúng sản phẩm. Nó trở nên khó ch
 
 ## Cài đặt
 
-Với Skills CLI:
+Vode theo định dạng Agent Skills và có thể cài bằng `skills` CLI.
+
+### Codex
+
+Cài global:
 
 ```bash
 npx skills add namnth2000/vode -a codex -g
@@ -41,7 +45,60 @@ Chỉ cài cho project hiện tại:
 npx skills add namnth2000/vode -a codex
 ```
 
-Với coding agent khác, copy thư mục `skills/vode/` vào thư mục skills mà agent đó hỗ trợ. Phần lõi của Vode không phụ thuộc vào model hay tên tool cụ thể.
+### Claude Code
+
+Cài global:
+
+```bash
+npx skills add namnth2000/vode -a claude-code -g
+```
+
+Chỉ cài cho project hiện tại:
+
+```bash
+npx skills add namnth2000/vode -a claude-code
+```
+
+### Cursor
+
+Cài global:
+
+```bash
+npx skills add namnth2000/vode -a cursor -g
+```
+
+Chỉ cài cho project hiện tại:
+
+```bash
+npx skills add namnth2000/vode -a cursor
+```
+
+### OpenCode
+
+Cài global:
+
+```bash
+npx skills add namnth2000/vode -a opencode -g
+```
+
+Chỉ cài cho project hiện tại:
+
+```bash
+npx skills add namnth2000/vode -a opencode
+```
+
+### Cài thủ công
+
+Download hoặc clone repo này, sau đó copy toàn bộ thư mục `skills/vode/` vào thư mục skills mà agent sử dụng. Giữ `SKILL.md` và thư mục `references/` cùng nhau.
+
+| Agent | Global | Trong project |
+| --- | --- | --- |
+| Codex | `~/.codex/skills/vode/` | `.agents/skills/vode/` |
+| Claude Code | `~/.claude/skills/vode/` | `.claude/skills/vode/` |
+| Cursor | `~/.cursor/skills/vode/` | `.agents/skills/vode/` |
+| OpenCode | `~/.config/opencode/skills/vode/` | `.agents/skills/vode/` |
+
+Nếu agent đang chạy và chưa nhận skill ngay sau khi cài, hãy restart agent.
 
 ## Không cần nhớ câu lệnh
 
