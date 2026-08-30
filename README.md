@@ -29,30 +29,80 @@ vode should I use localStorage or a database?
 vode this button is broken on mobile.
 ```
 
-Vietnamese input is explicitly supported:
+Explicit verbs are optional. Natural language is the default interface.
 
-```
-vode gợi ý bước tiếp theo
-vode làm gì tiếp?
-vode tôi đang băn khoăn có nên thêm đăng nhập không
-vode chỗ này bị lỗi trên mobile
-```
+## Installation
 
-## Install
+Vode follows the Agent Skills format and can be installed with the `skills` CLI.
 
-With the Skills CLI:
+### Codex
+
+Global installation:
 
 ```bash
 npx skills add namnth2000/vode -a codex -g
 ```
 
-Project-scoped:
+Project-scoped installation:
 
 ```bash
 npx skills add namnth2000/vode -a codex
 ```
 
-For another coding agent, copy `skills/vode/` into that agent's supported skills directory. Vode's core instructions are model-agnostic and capability-based.
+### Claude Code
+
+Global installation:
+
+```bash
+npx skills add namnth2000/vode -a claude-code -g
+```
+
+Project-scoped installation:
+
+```bash
+npx skills add namnth2000/vode -a claude-code
+```
+
+### Cursor
+
+Global installation:
+
+```bash
+npx skills add namnth2000/vode -a cursor -g
+```
+
+Project-scoped installation:
+
+```bash
+npx skills add namnth2000/vode -a cursor
+```
+
+### OpenCode
+
+Global installation:
+
+```bash
+npx skills add namnth2000/vode -a opencode -g
+```
+
+Project-scoped installation:
+
+```bash
+npx skills add namnth2000/vode -a opencode
+```
+
+### Manual installation
+
+Download or clone this repository, then copy the entire `skills/vode/` directory into the skills directory used by your agent. Keep `SKILL.md` and the `references/` directory together.
+
+| Agent | Global location | Project location |
+| --- | --- | --- |
+| Codex | `~/.codex/skills/vode/` | `.agents/skills/vode/` |
+| Claude Code | `~/.claude/skills/vode/` | `.claude/skills/vode/` |
+| Cursor | `~/.cursor/skills/vode/` | `.agents/skills/vode/` |
+| OpenCode | `~/.config/opencode/skills/vode/` | `.agents/skills/vode/` |
+
+If the agent is already running, restart it after installation if the skill is not detected immediately.
 
 ## Verbs
 
@@ -73,8 +123,6 @@ For another coding agent, copy `skills/vode/` into that agent's supported skills
 | `resume` | Understand where the project is and recommend what to do next | No |
 | `build` | Orchestrate the appropriate Vode steps from the current state | Depends |
 
-Explicit verbs are optional. If you just talk naturally, Vode routes by intent.
-
 ## Examples
 
 ### Continue an existing project
@@ -88,7 +136,7 @@ Vode checks the available conversation context, project docs, current source, wo
 ### Explore before coding
 
 ```
-vode tôi đang băn khoăn có nên thêm CodeMirror vào editor không
+vode I'm wondering whether I should add CodeMirror to the editor.
 ```
 
 This routes to `brainstorm`. Vode explores the trade-offs first. It does not modify code unless you ask.
@@ -96,7 +144,7 @@ This routes to `brainstorm`. Vode explores the trade-offs first. It does not mod
 ### Fix something
 
 ```
-vode preview bị che mất heading trên mobile, sửa giúp tôi
+vode the Preview control overlaps the heading on mobile, fix it.
 ```
 
 This routes to `debug`: reproduce/inspect -> find the actual cause -> make the smallest fix -> verify affected behavior.
