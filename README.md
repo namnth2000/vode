@@ -33,76 +33,18 @@ Explicit verbs are optional. Natural language is the default interface.
 
 ## Installation
 
-Vode follows the Agent Skills format and can be installed with the `skills` CLI.
-
-### Codex
-
-Global installation:
-
-```bash
-npx skills add namnth2000/vode -a codex -g
+```
+npx skills add namnth2000/vode
 ```
 
-Project-scoped installation:
+Re-run any time to update. Or copy [`SKILL.md`](skills/vode/SKILL.md) + [`references/`](skills/vode/references/) into:
 
-```bash
-npx skills add namnth2000/vode -a codex
-```
+- **Claude Code**: `~/.claude/skills/vode/`
+- **Cursor**: `.cursor/rules/vode.mdc` (body of `SKILL.md`, no frontmatter)
+- **Codex**: `~/.codex/skills/vode/` (personal) or `.codex/skills/vode/` (project-scoped)
+- **OpenCode**: `~/.config/opencode/skills/vode/` (personal)
 
-### Claude Code
-
-Global installation:
-
-```bash
-npx skills add namnth2000/vode -a claude-code -g
-```
-
-Project-scoped installation:
-
-```bash
-npx skills add namnth2000/vode -a claude-code
-```
-
-### Cursor
-
-Global installation:
-
-```bash
-npx skills add namnth2000/vode -a cursor -g
-```
-
-Project-scoped installation:
-
-```bash
-npx skills add namnth2000/vode -a cursor
-```
-
-### OpenCode
-
-Global installation:
-
-```bash
-npx skills add namnth2000/vode -a opencode -g
-```
-
-Project-scoped installation:
-
-```bash
-npx skills add namnth2000/vode -a opencode
-```
-
-### Manual installation
-
-Download or clone this repository, then copy the entire `skills/vode/` directory into the skills directory used by your agent. Keep `SKILL.md` and the `references/` directory together.
-
-| Agent | Global location | Project location |
-| --- | --- | --- |
-| Codex | `~/.codex/skills/vode/` | `.agents/skills/vode/` |
-| Claude Code | `~/.claude/skills/vode/` | `.claude/skills/vode/` |
-| Cursor | `~/.cursor/skills/vode/` | `.agents/skills/vode/` |
-| OpenCode | `~/.config/opencode/skills/vode/` | `.agents/skills/vode/` |
-
-If the agent is already running, restart it after installation if the skill is not detected immediately.
+The skill lives in [`SKILL.md`](skills/vode/SKILL.md) and [`references/`](skills/vode/references/).
 
 ## Verbs
 

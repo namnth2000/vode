@@ -29,76 +29,18 @@ Vibecoding rất nhanh khi AI hiểu đúng sản phẩm. Nó trở nên khó ch
 
 ## Cài đặt
 
-Vode theo định dạng Agent Skills và có thể cài bằng `skills` CLI.
-
-### Codex
-
-Cài global:
-
-```bash
-npx skills add namnth2000/vode -a codex -g
+```
+npx skills add namnth2000/vode
 ```
 
-Chỉ cài cho project hiện tại:
+Chạy lại lệnh này bất cứ lúc nào để cập nhật. Hoặc copy [`SKILL.md`](skills/vode/SKILL.md) + [`references/`](skills/vode/references/) vào:
 
-```bash
-npx skills add namnth2000/vode -a codex
-```
+- **Claude Code**: `~/.claude/skills/vode/`
+- **Cursor**: `.cursor/rules/vode.mdc` (chỉ lấy phần body của `SKILL.md`, bỏ frontmatter)
+- **Codex**: `~/.codex/skills/vode/` (cá nhân) hoặc `.codex/skills/vode/` (theo project)
+- **OpenCode**: `~/.config/opencode/skills/vode/` (cá nhân)
 
-### Claude Code
-
-Cài global:
-
-```bash
-npx skills add namnth2000/vode -a claude-code -g
-```
-
-Chỉ cài cho project hiện tại:
-
-```bash
-npx skills add namnth2000/vode -a claude-code
-```
-
-### Cursor
-
-Cài global:
-
-```bash
-npx skills add namnth2000/vode -a cursor -g
-```
-
-Chỉ cài cho project hiện tại:
-
-```bash
-npx skills add namnth2000/vode -a cursor
-```
-
-### OpenCode
-
-Cài global:
-
-```bash
-npx skills add namnth2000/vode -a opencode -g
-```
-
-Chỉ cài cho project hiện tại:
-
-```bash
-npx skills add namnth2000/vode -a opencode
-```
-
-### Cài thủ công
-
-Download hoặc clone repo này, sau đó copy toàn bộ thư mục `skills/vode/` vào thư mục skills mà agent sử dụng. Giữ `SKILL.md` và thư mục `references/` cùng nhau.
-
-| Agent | Global | Trong project |
-| --- | --- | --- |
-| Codex | `~/.codex/skills/vode/` | `.agents/skills/vode/` |
-| Claude Code | `~/.claude/skills/vode/` | `.claude/skills/vode/` |
-| Cursor | `~/.cursor/skills/vode/` | `.agents/skills/vode/` |
-| OpenCode | `~/.config/opencode/skills/vode/` | `.agents/skills/vode/` |
-
-Nếu agent đang chạy và chưa nhận skill ngay sau khi cài, hãy restart agent.
+Skill nằm trong [`SKILL.md`](skills/vode/SKILL.md) và [`references/`](skills/vode/references/).
 
 ## Không cần nhớ câu lệnh
 
