@@ -38,6 +38,25 @@ Load `references/questions.md` whenever the request may require clarification.
 
 Load `references/handoff.md` before returning work from any action verb.
 
+## Specialist boundary
+
+Vode owns product intent, scope, constraints, and continuity.
+
+When a capable specialist skill or tool is available for a narrow domain concern, let that specialist own the domain craft while Vode preserves the product boundaries.
+
+- do not hardcode or require a specific specialist
+- use only specialist capabilities that are actually available
+- do not run overlapping full Vode and specialist review/refine workflows for the same concern
+- re-enter Vode only when product scope, prior decisions, regressions, or new evidence need product-level judgment
+
+A purely domain-specific task with no unresolved product decision should not gain extra Vode ceremony just because Vode is available.
+
+## Direct execution rule
+
+When a requested change is already clear, small, reversible, and has no material product decision left unresolved, use the appropriate action verb and execute the smallest change directly.
+
+Do not add a planning stage, duplicate review pass, or new workflow layer for simple edits. Do not create a separate `direct` verb.
+
 ## Supported verbs
 
 - `brainstorm`

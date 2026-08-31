@@ -15,6 +15,18 @@ Then include only what helps the user act:
 
 Do not turn a simple decision into a long report.
 
+## Execution handoff
+
+When handing a clear work package to another executor or tool, prefer a compact product contract:
+
+- **Goal** - product/user outcome
+- **Change** - required changes
+- **Preserve** - existing decisions that must remain
+- **Avoid** - material non-goals or known traps
+- **Verify** - smallest relevant user flow
+
+Omit fields that have nothing material to say. Do not restate implementation details that the executor can discover from the project, and do not inflate a clear task into a second planning document.
+
 ## Action verb
 
 When files or product behavior changed, summarize:

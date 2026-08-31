@@ -23,6 +23,7 @@ Purpose: build the next coherent user-visible product slice.
 - do not build infrastructure for hypothetical scale
 - prefer a usable vertical slice over scaffolding
 - update docs only when project truth changed
+- when a specialist is used, keep it inside the product scope already established by Vode
 
 ### Before handoff
 
@@ -56,17 +57,17 @@ If the root cause is uncertain, say so and gather evidence before editing broadl
 
 ## review
 
-Purpose: assess the product or implementation without editing by default.
+Purpose: assess whether the product or implementation matches the intended product without editing by default.
 
-Review against the user's goal, not a generic best-practice catalog.
+Review against the user's goal and established product decisions, not a generic best-practice catalog.
 
 Prioritize:
 
 1. core product failure
-2. regression or broken UX
-3. unnecessary complexity
-4. confusing scope/flow
-5. polish
+2. regression or broken user flow
+3. violation of established product semantics or scope
+4. unnecessary complexity
+5. confusing product flow
 
 Use:
 
@@ -75,21 +76,25 @@ Use:
 - Minor
 - Won't fix
 
+When the concern is mainly domain-specific craft, such as visual execution, use an available specialist for that craft instead of duplicating its audit inside Vode. Vode should still call out product regressions, scope drift, or conflicts with prior decisions.
+
 A common pattern may be intentional. Do not classify taste as a defect simply because a rulebook dislikes it.
 
-End with the 1-3 highest-value changes, not a mandate to fix everything.
+End with the 1-3 highest-value product-level changes, not a mandate to fix everything.
 
 ## refine
 
-Purpose: improve something that already works.
+Purpose: improve something that already works without changing its product intent.
 
 ### Flow
 
 1. Identify the specific friction or quality gap.
 2. Preserve existing behavior and product semantics.
-3. Make the smallest visual/interaction/copy change that addresses it.
+3. Make the smallest change that addresses the gap.
 4. Check neighboring states and responsive behavior when relevant.
 5. Stop when the requested quality gap is solved.
+
+If the gap is mainly domain-specific craft and a relevant specialist is available, let that specialist guide the craft while Vode protects scope and product semantics. Do not run a second parallel Vode critique of the same concern.
 
 Refine is not permission to redesign the whole product.
 
