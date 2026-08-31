@@ -2,6 +2,15 @@
 
 All notable changes to Vode are documented here.
 
+## [1.2.0] - 2026-08-31
+
+### Changed
+
+- Added a recommended project-document convention: `PRODUCT.md` and `AGENTS.md` as core context, with `DESIGN.md` and `ARCHITECTURE.md` when relevant, while continuing to recognize existing equivalent filenames.
+- Added a lightweight taste-alignment checkpoint for UI-heavy work when broad aesthetic language still permits materially different visual directions.
+- Separated functional product clarity from visual clarity so Vode does not start broad UI implementation before user taste is sufficiently resolved.
+- Clarified that specialist design skills improve craft after direction is clear; they should not silently choose unresolved user taste.
+
 ## [1.1.0] - 2026-08-31
 
 ### Changed
