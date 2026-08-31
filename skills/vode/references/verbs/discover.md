@@ -37,9 +37,12 @@ Try to establish:
 - V1 boundary
 - explicit non-goals
 - important constraints
+- intended experience or visual direction when the product is UI-heavy or taste-driven
 - definition of done
 
 Read existing context before asking.
+
+Functional clarity and visual clarity are separate. A product may be clear enough in behavior while still being unsafe to implement visually because several materially different directions fit the brief. When that happens, use the taste-alignment checkpoint in the clarification protocol before broad UI work.
 
 If critical information is missing, use the clarification protocol.
 
@@ -52,6 +55,7 @@ Prefer a compact product understanding:
 - **Core loop**
 - **V1**
 - **Not now**
+- **Experience / visual direction**, only when material
 - **Done when**
 - **Open decision**, only if truly unresolved
 
