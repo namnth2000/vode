@@ -10,9 +10,10 @@ Purpose: build the next coherent user-visible product slice.
 
 1. Read project instructions.
 2. Read only the docs relevant to the requested behavior.
-3. Inspect existing implementation patterns.
-4. Identify explicit decisions that must remain unchanged.
-5. Clarify only material ambiguity.
+3. For UI-heavy or taste-driven work, confirm visual direction from the relevant design source of truth, references, existing UI, or an explicit prior user choice.
+4. Inspect existing implementation patterns.
+5. Identify explicit decisions that must remain unchanged.
+6. Clarify only material ambiguity. If several materially different visual directions still fit, use the taste-alignment checkpoint before broad UI implementation.
 
 ### Implementation rules
 
@@ -23,7 +24,8 @@ Purpose: build the next coherent user-visible product slice.
 - do not build infrastructure for hypothetical scale
 - prefer a usable vertical slice over scaffolding
 - update docs only when project truth changed
-- when a specialist is used, keep it inside the product scope already established by Vode
+- when a specialist is used, keep it inside the product scope and visual direction already established by Vode
+- use specialists to execute domain craft, not to silently choose unresolved user taste
 
 ### Before handoff
 
