@@ -31,16 +31,33 @@ Do not claim access to conversations that are not available.
 
 ### Level 3 - project instructions and docs
 
-When available, inspect the most relevant files first:
+When available, inspect the most relevant source of truth for the concern at hand:
 
-- AGENTS.md or equivalent agent instructions
-- README
-- product/spec docs
-- roadmap/backlog
-- design or architecture docs
-- deployment docs when launch is in scope
+- agent instructions: `AGENTS.md` or equivalent
+- product truth: prefer `PRODUCT.md`; recognize equivalents such as `Project_Spec.md`, `PRD.md`, `SPEC.md`, `docs/product.md`, or `docs/spec.md`
+- design truth when relevant: prefer `DESIGN.md`; recognize equivalent UI/style/design specifications
+- architecture truth when relevant: prefer `ARCHITECTURE.md`; recognize equivalents such as `TECH.md` or `docs/architecture.md`
+- README, roadmap/backlog, and deployment docs only when they can materially change the current decision
 
 Do not read every document simply because it exists.
+
+## Recommended project document convention
+
+Vode recommends these roles for new projects:
+
+### Core
+
+- `PRODUCT.md` - what the product is, who it serves, the current scope, user-visible behavior, product rules, and definition of done
+- `AGENTS.md` - how agents should work in the repository: commands, technical constraints, durable implementation decisions, known pitfalls, and verification expectations
+
+### When relevant
+
+- `DESIGN.md` - visual direction, interaction principles, references, explicit do/don't guidance, and durable taste decisions
+- `ARCHITECTURE.md` - technical structure and significant architecture decisions that should persist across tasks
+
+These filenames are conventions, not requirements. Reuse equivalent existing documents instead of renaming or creating duplicates just to satisfy Vode.
+
+A project can be product-clear without being visually clear. The presence of `PRODUCT.md` does not remove the need to inspect `DESIGN.md`, references, or existing UI when visual direction materially affects the result.
 
 ### Level 4 - source and current work
 
@@ -89,10 +106,15 @@ If no, skip it.
 When context disagrees, prefer:
 
 1. current explicit user instruction
-2. current project instructions
-3. current product docs
-4. current implementation behavior
-5. recent history
-6. generic best practice
+2. the relevant source of truth for that concern:
+   - product behavior -> product docs such as `PRODUCT.md`
+   - visual/interaction direction -> design docs such as `DESIGN.md`
+   - technical structure -> architecture docs such as `ARCHITECTURE.md`
+   - execution constraints -> `AGENTS.md` or equivalent project instructions
+3. current implementation behavior
+4. recent history
+5. generic best practice
+
+Project instructions govern how work is executed, but should not silently redefine product, design, or architecture truth outside their concern.
 
 Flag meaningful conflicts rather than silently choosing.

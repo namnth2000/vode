@@ -66,6 +66,23 @@ vode xem lại giúp tôi xem đã ổn chưa
 
 Vode sẽ route theo ý định.
 
+## Convention cho context của project
+
+Với project mới, Vode khuyên dùng một số vai trò tài liệu nhỏ và rõ:
+
+- `PRODUCT.md` - sản phẩm là gì, scope hiện tại, behavior và definition of done
+- `AGENTS.md` - agent nên làm việc trong repo thế nào, gồm command, technical constraints, quyết định kỹ thuật có giá trị lâu dài và known pitfalls
+- `DESIGN.md` - optional, dùng khi visual direction và interaction cần một source of truth riêng
+- `ARCHITECTURE.md` - optional, dùng khi cấu trúc kỹ thuật cần được lưu lại rõ ràng
+
+Đây là convention chứ không phải yêu cầu bắt buộc. Nếu project đã có `Project_Spec.md`, PRD, design spec hoặc architecture doc tương đương, Vode nên dùng lại thay vì tạo tài liệu trùng lặp.
+
+## Làm rõ visual direction trước khi implement
+
+Một UI có thể đã rõ về chức năng nhưng vẫn chưa rõ về gu. Những mô tả như "minimal", "glassmorphism", "premium" hoặc chỉ một màu chủ đạo vẫn có thể dẫn tới nhiều thiết kế rất khác nhau.
+
+Khi visual direction có thể làm thay đổi đáng kể kết quả, Vode phải làm rõ direction trước bằng design docs, reference, UI hiện tại hoặc một taste-alignment checkpoint ngắn. Sau đó specialist design skill mới nên làm phần craft bên trong direction đã chốt, thay vì tự đoán gu của người dùng.
+
 ## Các verb
 
 | Verb | Khi nào dùng | Mặc định có sửa code? |
