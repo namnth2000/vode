@@ -26,6 +26,11 @@ Use these cases when changing Vode routing.
 | `vode đây là feedback tuần đầu, nên làm V2 thế nào?` | iterate | feedback -> next version |
 | `vode không ai dùng, có nên đổi hướng không?` | pivot | product direction |
 | `vode build app Markdown to PDF này` | build | broad orchestration |
+| `vode đổi giá $10 thành $5` | implement | clear small edit; execute directly without extra planning ceremony |
+| `vode có nên đổi landing sang pricing-first không?` | decide | concrete product choice remains Vode-owned |
+| `vode audit typography và spacing` with a visual specialist available | review | Vode preserves product constraints; specialist owns visual craft |
+| `vode landing này nhìn AI quá` with a visual specialist available | refine | focused refinement; avoid duplicate Vode and specialist critique |
+| `vode implement pricing, use a visual specialist where useful` | implement | Vode owns scope; specialist only handles relevant visual craft |
 
 ## Regression rule
 
