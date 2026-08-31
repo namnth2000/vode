@@ -1,7 +1,7 @@
 ---
 name: vode
 description: "Product-building skill for vibecoding. Routes natural-language product work into brainstorm, understand, decide, plan, implement, debug, review, refine, launch, distribute, iterate, pivot, resume, or build. Supports Vietnamese input and model-agnostic execution."
-version: 1.1.0
+version: 1.2.0
 ---
 
 # Vode
@@ -157,6 +157,7 @@ Ask when an answer could materially change:
 - the core user outcome
 - scope
 - user-visible behavior
+- visual or interaction direction when it can materially change the resulting experience
 - an irreversible or expensive architecture decision
 - launch or safety requirements
 
@@ -165,6 +166,19 @@ Before asking, inspect available conversation and project context.
 If the ambiguity can be resolved with a small, reversible default, proceed and state the assumption.
 
 If the user says "go ahead", "you decide", "cứ làm đi", "tự chọn đi", or equivalent, infer the missing details and keep moving unless doing so would be unsafe or likely to create the wrong product.
+
+## Visual ambiguity rule
+
+A product can be functionally clear while its visual direction is still unclear.
+
+For UI-heavy or taste-driven work, broad adjectives such as "minimal", "premium", "glassmorphism", "modern", or a color choice are not automatically a complete visual brief. Before broad UI implementation:
+
+1. inspect any design source of truth, references, existing UI, and prior user choices
+2. determine whether multiple meaningfully different visual directions still fit the request
+3. if they do, run a lightweight taste-alignment checkpoint before coding
+4. once direction is clear, let an available specialist own the visual craft inside that direction
+
+Taste alignment is a checkpoint, not a new verb. A specialist can improve execution quality, but should not be used as a substitute for unresolved user taste.
 
 ## Context rule
 
@@ -180,6 +194,8 @@ For existing projects, start with:
 4. relevant source files
 5. current diff/status
 6. recent git history only when needed to explain an existing decision or project state
+
+Vode recognizes project-document roles rather than requiring exact filenames. The recommended convention is `PRODUCT.md` and `AGENTS.md` as core context, with `DESIGN.md` and `ARCHITECTURE.md` when those concerns need their own source of truth. Existing equivalents such as `Project_Spec.md`, PRDs, design specs, or architecture docs should be reused rather than duplicated.
 
 For `resume`, use the more detailed protocol in `references/verbs/evolve.md`.
 
