@@ -31,6 +31,23 @@ vode this button is broken on mobile.
 
 Explicit verbs are optional. Natural language is the default interface.
 
+## Project context convention
+
+For new projects, Vode recommends a small set of document roles:
+
+- `PRODUCT.md` - what the product is, current scope, behavior, and definition of done
+- `AGENTS.md` - how agents should work in the repo, including commands, technical constraints, durable decisions, and known pitfalls
+- `DESIGN.md` - optional visual and interaction direction when taste matters
+- `ARCHITECTURE.md` - optional technical structure when architecture needs its own durable source of truth
+
+These names are conventions, not requirements. Vode should reuse equivalent existing files such as `Project_Spec.md`, PRDs, design specs, or architecture docs instead of creating duplicates.
+
+## Visual direction before implementation
+
+A UI can be functionally clear but still visually ambiguous. Requests such as "minimal", "glassmorphism", "premium", or a color choice may still allow several very different designs.
+
+When visual direction materially affects the result, Vode aligns the direction first using existing design docs, references, current UI, or a lightweight taste-alignment checkpoint. Specialist design skills can then improve the craft inside that chosen direction rather than guessing the user's taste.
+
 ## Installation
 
 ```
