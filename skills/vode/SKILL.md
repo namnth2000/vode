@@ -1,7 +1,7 @@
 ---
 name: vode
 description: "Product-building skill for vibecoding. Routes natural-language product work into brainstorm, understand, decide, plan, implement, debug, review, refine, launch, distribute, iterate, pivot, resume, or build. Supports Vietnamese input and model-agnostic execution."
-version: 1.0.0
+version: 1.1.0
 ---
 
 # Vode
