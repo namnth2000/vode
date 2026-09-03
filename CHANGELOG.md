@@ -2,6 +2,15 @@
 
 All notable changes to Vode are documented here.
 
+## [1.3.0] - 2026-09-03
+
+### Changed
+
+- Added progressive context disclosure so Vode locates and reads the smallest relevant sources before widening context.
+- Added tool-output discipline to retain failures and decision-relevant evidence without carrying unnecessary logs forward.
+- Added capability-based guidance for long-session compaction and prompt caching without requiring state files or provider-specific APIs.
+- Added maintainer guidance for benchmarking context optimization by successful-task quality as well as token, cache, time, and cost metrics.
+
 ## [1.2.0] - 2026-08-31
 
 ### Changed

@@ -1,7 +1,7 @@
 ---
 name: vode
 description: "Product-building skill for vibecoding. Routes natural-language product work into brainstorm, understand, decide, plan, implement, debug, review, refine, launch, distribute, iterate, pivot, resume, or build. Supports Vietnamese input and model-agnostic execution."
-version: 1.2.0
+version: 1.3.0
 ---
 
 # Vode
@@ -186,6 +186,8 @@ Use the smallest context set that can answer the current question.
 
 Do not read full history by default.
 
+Use progressive disclosure: locate the smallest relevant source first, read narrow ranges when tooling allows, and widen only when the current evidence is insufficient. Do not preload docs, skills, source files, or history "for safety."
+
 For existing projects, start with:
 
 1. current request and current conversation, if available
@@ -196,6 +198,8 @@ For existing projects, start with:
 6. recent git history only when needed to explain an existing decision or project state
 
 Vode recognizes project-document roles rather than requiring exact filenames. The recommended convention is `PRODUCT.md` and `AGENTS.md` as core context, with `DESIGN.md` and `ARCHITECTURE.md` when those concerns need their own source of truth. Existing equivalents such as `Project_Spec.md`, PRDs, design specs, or architecture docs should be reused rather than duplicated.
+
+When the runtime offers compaction, summarization, or prompt caching, use those capabilities without making them mandatory. Preserve the current goal, decisions, completed or changed work, pending work, and constraints when compacting. Keep stable reusable context ahead of volatile task context when the harness benefits from prefix caching, but never change product or execution semantics just to improve cache hits.
 
 For `resume`, use the more detailed protocol in `references/verbs/evolve.md`.
 

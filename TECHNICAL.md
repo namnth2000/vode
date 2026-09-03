@@ -146,6 +146,57 @@ No single capability is mandatory. Vode must degrade gracefully.
 
 Vode must never pretend it read chat history, git, files, browser output, or external services it cannot actually access.
 
+## Context efficiency
+
+Vode should optimize context selection before introducing a custom agent runtime.
+
+The preferred flow is:
+
+```text
+request
+  -> route concern
+  -> select relevant project truth
+  -> locate relevant source
+  -> read the smallest useful ranges
+  -> execute
+  -> keep only decision-relevant tool output
+  -> widen context only when blocked
+```
+
+This is progressive disclosure. It reduces context pressure without requiring embeddings, a vector database, a generated repo index, or a mandatory session-state file.
+
+### Stable and volatile context
+
+When the host supports prompt caching, keep reusable context as stable as practical and place volatile task data later. Typical stable material includes durable agent instructions and tool definitions. Typical volatile material includes the current task, current diff, errors, and newly retrieved source.
+
+This is capability-based guidance. Vode must not require a provider-specific cache API, and correctness must not depend on a cache hit.
+
+### Long-running sessions
+
+If the host can compact or summarize conversation state, retain the minimum durable working state:
+
+- current goal
+- decisions and constraints
+- completed or changed work
+- pending work
+- unresolved failures
+
+Do not add `SESSION_STATE.md`, telemetry, or a Vode database by default. Add persistent machinery only after repeated real tasks show that the host's native capabilities are insufficient.
+
+### Measuring whether optimization works
+
+Token reduction is useful only when task quality is preserved. For representative real tasks, compare the baseline and optimized workflow using whatever metrics the host exposes:
+
+- task success
+- human corrections required
+- total input
+- fresh versus cached input, when available
+- output/reasoning usage, when available
+- tool-output volume
+- elapsed time or cost, when available
+
+Prefer cost or token usage per successful task over a headline cache-hit percentage. Do not publish a savings percentage from a single session or without a comparable baseline.
+
 ## Questions
 
 Questions are conditional, not ceremonial.
