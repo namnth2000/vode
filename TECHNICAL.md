@@ -183,20 +183,6 @@ If the host can compact or summarize conversation state, retain the minimum dura
 
 Do not add `SESSION_STATE.md`, telemetry, or a Vode database by default. Add persistent machinery only after repeated real tasks show that the host's native capabilities are insufficient.
 
-### Measuring whether optimization works
-
-Token reduction is useful only when task quality is preserved. For representative real tasks, compare the baseline and optimized workflow using whatever metrics the host exposes:
-
-- task success
-- human corrections required
-- total input
-- fresh versus cached input, when available
-- output/reasoning usage, when available
-- tool-output volume
-- elapsed time or cost, when available
-
-Prefer cost or token usage per successful task over a headline cache-hit percentage. Do not publish a savings percentage from a single session or without a comparable baseline.
-
 ## Questions
 
 Questions are conditional, not ceremonial.

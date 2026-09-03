@@ -143,7 +143,6 @@ Do not create a mandatory Vode state file just to implement this. Prefer capabil
 
 When prompt caching is available, keep stable reusable instructions and definitions ahead of volatile task-specific context when the harness benefits from prefix reuse. Cache behavior is an optimization, not part of Vode's correctness contract.
 
-Do not claim token or cost savings unless the runtime exposes enough usage data to measure them.
 
 ## Conflict order
 
