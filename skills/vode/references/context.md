@@ -101,6 +101,50 @@ For each additional context source, ask:
 
 If no, skip it.
 
+## Progressive disclosure
+
+Treat context loading as a narrowing loop rather than a one-time dump:
+
+1. route the current concern
+2. locate likely sources with the lightest available evidence, such as search results, file names, imports, current diff, or error locations
+3. read the smallest relevant files or ranges
+4. widen only when the current evidence cannot answer or safely execute the task
+
+Prefer targeted source ranges over whole-file reads when the surrounding context is not needed. Prefer current diff and failing paths over broad repository scans for local fixes.
+
+Do not load unrelated docs, specialist skills, source areas, or history merely because they are available.
+
+## Tool-output discipline
+
+Tool output is context too.
+
+When the runtime allows filtering or summarization, keep the evidence that can change the next action:
+
+- command and exit status
+- failing tests or checks
+- relevant errors and warnings
+- concise changed diff or affected paths
+
+Avoid carrying repeated success logs, dependency progress, unchanged listings, or very large outputs after their useful signal has been extracted.
+
+Never compact away evidence needed to diagnose an unresolved failure.
+
+## Long sessions and caching
+
+When native compaction or summarization is available, preserve a compact working state containing:
+
+- current goal
+- decisions that must remain true
+- completed or changed work
+- pending work
+- important constraints and known failures
+
+Do not create a mandatory Vode state file just to implement this. Prefer capabilities the current agent already has.
+
+When prompt caching is available, keep stable reusable instructions and definitions ahead of volatile task-specific context when the harness benefits from prefix reuse. Cache behavior is an optimization, not part of Vode's correctness contract.
+
+Do not claim token or cost savings unless the runtime exposes enough usage data to measure them.
+
 ## Conflict order
 
 When context disagrees, prefer:
